@@ -1,14 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles.css">
-  <script src="./script.js" defer></script>
-  <title>Library</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+    <title>myLibrary - Your online bookshelf</title>
+  </head>
+  <body>
+      <header>
+        <div class="branding">myLibrary</div>
+        <div class="controls">
+          <span class="material-icons"id="save-button" title="Save">save</span>
+          <label for="select-file">
+            <span class="material-icons"id="upload-button" title="Upload">file_upload
+              <input id="select-file" type="file" name="file" style="display: none">
+            </span>
+          </label>
+        </div>
+      </header>
+      <main class="card-grid"><div class="material-icons card" id="add-button">add_circle_outline</div></main>
+      <div class="modal-outter">
+        <div class="modal-inner">
+          <div class="title-bar">
+            <span class="title-text">Book data</span>
+            <span class="material-icons close-button">close</span>
+          </div>
+
+          <form class="book-form" name="bookform">
+            <label for="title" title="Title of the book">Title:</label>
+            <input type="textbox" id="title" name="title" required>
+
+            <label for="author" title="Author of the book">Author:</label>
+            <input type="textbox" id="author" name="author" required>
+
+            <label for="pages" title="Number of pages">Pages:</label>
+            <input type="number" id="pages" name="pages" min="0" max="999" placeholder="1 - 999..." required>
+
+            <label>Read:</label>
+            <div class="switch">
+              <input type="radio" name="read" id="true" value="true">
+              <label for="true" class="switch-button">Yes</label>
+
+              <input type="radio" name="read" id="false" value="false" checked>
+              <label for="false" class="switch-button">No</label>
+            </div>
+
+            <label for="cover" title="Link to the book cover image">Cover link:</label>
+            <input type="textbox" id="cover" name="cover" placeholder="http://example.com/image.jpg">
+
+            <button class="submit-button" type="submit">Submit book</button>
+          </form>
+        </div>
+      </div>
+  </body>
 </html>
